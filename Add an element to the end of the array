@@ -1,0 +1,15 @@
+question
+Write a function pushElement that takes the arr array and value as arguments, adds value to the end of the array, 
+and returns the resulting array.
+Example:
+the pushElement ([1, 2, 3], "a") function should return [1, 2, 3, "a"];
+the pushElement ([0, 0, 0], 5) function must return [0, 0, 0, 5];
+the pushElement ([], 1) function must return [1].
+Write your solution here
+
+solution:
+
+function pushElement(arr, value){
+  arr.push(value);
+  return arr;
+}
