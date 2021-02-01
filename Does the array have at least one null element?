@@ -1,0 +1,24 @@
+question
+Write the isZeroInArray function that takes the arr array as an argument and returns true if the array contains at least one zero element, 
+and false otherwise.
+Example:
+the isZeroInArray ([20, -26, 0, -12]) function must return true;
+the isZeroInArray ([2, 9, 0, 0]) function must return true;
+the isZeroInArray ([1, 2, 3, 4]) function must return false;
+the isZeroInArray ([1, -1]) function must return false;
+the isZeroInArray ([]) function must return false.
+
+solution:
+
+function isZeroInArray(arr){
+  let count = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === 0){
+    count++;
+    break;
+    }
+  }
+  if(count === 1) return true;
+  else 
+  return false; 
+}
