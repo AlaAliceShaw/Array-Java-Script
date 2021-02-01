@@ -1,0 +1,24 @@
+question
+Write a function isNegativeInArray that takes the arr array as an argument and returns true 
+if the array contains at least one negative element, and false otherwise.
+Example:
+the isNegativeInArray ([20, -26, -12]) function must return true;
+the isNegativeInArray ([2, 9, -10]) function must return true;
+the isNegativeInArray ([1, 2, 3, 4]) function must return false;
+the isNegativeInArray ([1, 0]) function must return false;
+the isNegativeInArray ([]) function must return false.
+
+
+solution :
+
+function isNegativeInArray(arr){
+  let count =0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] < 0) {
+    count ++;
+    break;
+    }
+  }
+  if(count === 1) return true;
+  else return false;
+}
