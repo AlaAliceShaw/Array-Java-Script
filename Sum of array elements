@@ -1,0 +1,18 @@
+question
+Write a function sumOfElements that takes the arr array as an argument and returns the sum of the array elements.
+Use a loop in your solution. Array methods are not allowed.
+Example:
+sumOfElements ([1, 2, 3]) should return 6;
+sumOfElements ([15]) should return 15;
+sumOfElements ([]) function should return 0
+
+
+solution:
+
+function sumOfElements(arr){
+  let sum = 0;
+  for(let i = 0; i < arr.length;i++){
+    sum = sum + arr[i];
+  }
+  return sum;
+}
