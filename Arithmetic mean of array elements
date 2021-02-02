@@ -1,0 +1,18 @@
+question
+Write a function average that takes an array arr as an argument and returns the average of the elements in the array. Round the result to two decimal places. In all tests, the array is not empty.
+Use a loop in your solution. Array methods are not allowed.
+Example:
+the average function ([1, 2, 3]) should return 2;
+the average ([4, 5]) function should return 4.5;
+the average function ([2, 3, 5]) should return 3.33;
+the average function ([2, 2, 2]) should return 2.
+
+solution:
+
+function average(arr){
+let sum = 0;
+  for(let el of arr) {
+    sum+=el;
+  }
+  return +(sum/arr.length).toFixed(2);
+}
