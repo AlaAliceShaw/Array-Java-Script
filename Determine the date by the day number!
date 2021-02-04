@@ -1,0 +1,36 @@
+question
+What date corresponds to the 100th day of the year? What date corresponds to day 200? 
+But the answer also depends on whether the year is a leap year or not!
+Write a function that will help you determine the date if you know the number of the day in the year,
+as well as whether the year is a leap year or not. The function takes the day number day and the boolean isLeap as 
+arguments and returns the date of the year as the string "Month, day". In all tests, the day number is a number from 1 to 366.
+Example:
+getDay (15, false) should return "January, 15";
+getDay (41, false) should return "February, 10";
+getDay (59, false) should return "February, 28";
+getDay (60, false) should return "March, 1";
+getDay (60, true) should return "February, 29";
+getDay (61, false) should return "March, 2";
+getDay (61, true) function should return "March, 1";
+getDay (365, false) should return "December, 31";
+getDay (365, true) function should return "December, 30";
+getDay (366, true) should return "December, 31";
+getDay (366, false) should return "wrong day".
+
+solution:
+
+function getDay(day, isLeap){
+ if(day > 366 || day <= 0 || day ===366 && isLeap === false) return "wrong day";
+ let arr = [31,28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+ if(isLeap === true) arr[1] = 29;
+ let sum = 0;
+ let i = 0;
+ while(sum < day) {
+ sum +=arr[i];
+ i++;
+ }
+ let d = day - sum + arr[i - 1];
+ let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; 
+ let month = months[i - 1];
+ return `${month}, ${d}`;
+}
