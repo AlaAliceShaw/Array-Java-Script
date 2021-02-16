@@ -1,0 +1,18 @@
+question
+An array containing names is given. Get an array of the first letters of the names contained in the original array.
+Write a function arrayOfFirstLetters that takes an array of strings names as an argument and returns an array containing 
+the first letters of the strings in the original array.
+Example:
+arrayOfFirstLetters (["Alice", "Bob"]) should return ["A", "B"];
+arrayOfFirstLetters (["Kate"]) should return ["K"];
+arrayOfFirstLetters ([]) should return [].
+
+solution:
+
+function arrayOfFirstLetters(names){
+  let newarr = [];
+    for(let i = 0; i < names.length; i++){
+     newarr.push(names[i][0]);
+     }
+     return newarr;
+}
