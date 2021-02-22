@@ -1,0 +1,14 @@
+question
+Write a function deleteFromEnd that takes the arr array as an argument, removes the last element of the array, and returns the resulting array.
+Example:
+the deleteFromEnd ([1, 2, 3]) function must return [1, 2];
+the deleteFromEnd ([1]) function must return [];
+function deleteFromEnd ([]) should return []
+
+
+solution;
+
+function deleteFromEnd(arr){
+let n = arr.pop();
+  return arr;
+}
