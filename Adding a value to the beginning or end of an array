@@ -1,0 +1,20 @@
+question
+Write a function addValue that takes an array arr and value as arguments, adds value to the end of the array if value is a number, 
+or to the beginning of the array if value is a string, then returns the resulting array.
+Example:
+addValue ([1, 2, 3], 10) should return [1, 2, 3, 10];
+addValue ([1, 1, 1], "a") should return ["a", 1, 1, 1];
+function addValue ([1], 10) should return [1, 10];
+function addValue ([1], "b") should return ["b", 1];
+addValue ([], 0) function should return [0]
+
+solution:
+
+function addValue(arr, value){
+  let i = value;
+    if(typeof value === "number")
+    arr.push(i);
+    if(typeof value === "string")
+    arr.unshift(i);
+  return arr;
+}
