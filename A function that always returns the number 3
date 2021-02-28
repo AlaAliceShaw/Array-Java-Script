@@ -1,0 +1,16 @@
+question
+Write a function three that always returns 3. Quite easy? Yes, if you don't take into account the conditions that you shouldn't use 
+in the function:
+numbers 0, 1, 2, 3, 4, 5, 6, 7, 8, 9;
+operation signs +, -, *, /,%
+length property
+Example:
+
+the three () function should return 3.
+
+solution:
+
+function three(){
+  let str= "Alla";
+  return str.indexOf("a")
+}
