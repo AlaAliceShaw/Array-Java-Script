@@ -1,0 +1,16 @@
+question
+Write a function lastIndexOfValue that takes a non-empty arr array and value as arguments, and returns the last index of the array
+element with value, or "Not found" if there is no such element.
+Examples:
+lastIndexOfValue ([10, 3, 4, 3, 5], 3) should return 3;
+function lastIndexOfValue ([0, 1, 2, 3], 1) must return 1;
+lastIndexOfValue ([5, 4, 4, 4, 5, 3], 4) should return 3;
+lastIndexOfValue ([2, 2, 2, 2], 2) should return 3.
+lastIndexOfValue ([2, 3, -2, -4], 0) should return "Not found".
+
+solution:
+
+function lastIndexOfValue(arr, value){
+ return arr.includes(value)? arr.lastIndexOf(value):"Not found";
+}
+ 
