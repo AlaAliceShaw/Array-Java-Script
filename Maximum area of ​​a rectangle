@@ -1,0 +1,16 @@
+question
+There is a sequence of sizes of rectangles, given by pairs of their sides [a, b]:
+[[a0, b0], [a1, b1], ..., [an, bn]]. Find the rectangle with the maximum area.
+Write a function maxRectangleSquare that takes an array arr containing the dimensions of the rectangles 
+as an argument and returns the maximum area of ​​the rectangle.
+Example:
+maxRectangleSquare ([[3, 4], [8, 1], [2, 3]]) should return 12;
+maxRectangleSquare ([[7, 7], [7, 8]]) should return 56;
+maxRectangleSquare ([[2, 4]]) should return 8;
+the maxRectangleSquare ([]) function must return null;
+
+solution:
+
+function maxRectangleSquare(arr){
+ return arr.length ? Math.max(...arr.map((el) => el[0] * el[1])): null;
+}
